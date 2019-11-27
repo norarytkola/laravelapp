@@ -42,4 +42,9 @@ class MessageController extends Controller{
         return redirect()->route('home')->withHeading('Viesti lähetetty');
         
     }
+
+    public function index(){
+        $messages=Message::paginate(8);
+        return view('/pages/posts', compact('messages', $messages));
+    }
 }

@@ -13,8 +13,10 @@
 
 Route::get('/', 'PageController@home')->name('home');
 
-Route::post('/', 'MessageController@store')->name('post');
+Route::post('/post', 'MessageController@store')->name('post');
 
 Route::get('/post', 'MessageController@create')->name('post');
 
 Route::get('/about', 'PageController@about')->name('about');
+
+Route::get('/posts', 'MessageController@index')->name('posts');
