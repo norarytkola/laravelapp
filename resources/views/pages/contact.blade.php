@@ -2,8 +2,15 @@
  
  @include('partials/header')
  
-    <div class="row justify-content-center pt-5">
+    <div class="row justify-content-center pt-5 mb-5">
         <h2>Ota yhteyttä</h2>
+    </div>
+
+    <div class="row justify-content-center mb-4">
+        <div class="col-8">
+            <p>Viestit ja etunimi julkaistaan <a href="{{route('posts')}}">Viestit</a>-osiossa. Sukunimesi ja 
+            sähköpostiosoitteesi eivät päädy muiden vierailioiden käsiin.</p>
+        </div>
     </div>
 
     <div class="row justify-content-center">
