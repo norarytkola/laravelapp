@@ -20,3 +20,7 @@ Route::get('/post', 'MessageController@create')->name('post');
 Route::get('/about', 'PageController@about')->name('about');
 
 Route::get('/posts', 'MessageController@index')->name('posts');
+
+Route::get('/message/{id}', 'MessageController@answer')->name('answer');
+
+Route::post('/message/{id}','MessageController@postAnswer')->name('post.answer');

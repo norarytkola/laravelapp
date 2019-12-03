@@ -22,7 +22,8 @@
                 </div>
                 <div class="card-footer">
                     {{ $message->created_at }}
-                </div>
+                    <a class="btn btn-primary mt-2" href="{{ route('answer',[ $message->id])}}">Vastaa tähän viestiin</a>
+                </div> 
             </div>
 
         @endforeach
