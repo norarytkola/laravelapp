@@ -44,7 +44,8 @@ class MessageController extends Controller{
     }
     public function answer($id){
         $message=Message::find($id);
-        return view('/pages/message')->withMessage($message);
+        $answers=Answer::where('original_message', $id)->get();
+        return view('/pages/message', compact('answers', $answers))->withMessage($message);
     }
     public function postAnswer(Request $request, $id){
         $this->validate($request, array(

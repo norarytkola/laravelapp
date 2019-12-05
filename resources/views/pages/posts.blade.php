@@ -14,15 +14,15 @@
          @foreach($messages as $message)
             
             <div class="card col-3 p-0">
-                <div class="card-header">
+                <div class="card-header text-center">
                     {{ $message->firstname }}
                 </div>
                 <div class="card-body">
                     {{ $message->message }}
                 </div>
-                <div class="card-footer">
+                <div class="card-footer text-center">
                     {{ $message->created_at }}
-                    <a class="btn btn-primary mt-2" href="{{ route('answer',[ $message->id])}}">Vastaa tähän viestiin</a>
+                    <a class="btn btn-outline-secondary mt-2" href="{{ route('answer',[ $message->id])}}">Vastaa tähän viestiin</a>
                 </div> 
             </div>
 

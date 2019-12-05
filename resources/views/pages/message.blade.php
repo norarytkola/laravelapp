@@ -20,6 +20,25 @@
         </div>
     </div>
 
+    @if(isset($answers))
+        @foreach($answers as $answer)
+        <div class="row justify-content-center">
+            <div class="card col-3 p-0">
+                <div class="card-header">
+                    {{ $answer->nickname }}
+                </div>
+                <div class="card-body">
+                    {{ $answer->answer }}
+                </div>
+                <div class="card-footer">
+                    {{ $answer->created_at }}
+                </div>  
+            </div>
+        </div>
+        @endforeach
+    @endif
+
+
     <div class="row justify-content-center">
         <div class="card col-3 p-0">
             {!! Form::open(array('route'=>['post.answer',$message->id],'method'=>'POST')) !!}
